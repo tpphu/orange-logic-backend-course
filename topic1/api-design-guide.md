@@ -440,8 +440,8 @@ message ProductRequest{
 
 ## References
 
-- [API Design Guide | Standard Methods](https://cloud.google.com/apis/design/standard_methods#list)
-- [Standard methods: List](https://google.aip.dev/132)
+- [Cloud API Design Guide](https://cloud.google.com/apis/design)
+- [API Improvement Proposals](https://google.aip.dev)
 
 
 [1] For only Authentication/Private API
