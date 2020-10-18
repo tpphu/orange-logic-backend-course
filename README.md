@@ -13,6 +13,8 @@ Welcome to my course, I am on way to help you.
 
 ### Topic 1
 
+> Docs: [Slide](https://docs.google.com/presentation/d/1ody_kuYnMO1SiqlAaLXgG6DgHufDcwB0KOFiAgUqMnA/edit?usp=sharing)
+
 - API Design
 - API Security
 - Unit Test
