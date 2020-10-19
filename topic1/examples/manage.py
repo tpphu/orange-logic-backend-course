@@ -25,6 +25,16 @@ def blog_create():
         content=blog.content
     )
 
+@app.route("/blog/<int:id>", methods=["GET"])
+def blog_get(id):
+    blog = Blog.query.filter_by(id=id).first()
+    return jsonify(
+        id = blog.id,
+        title=blog.title,
+        content=blog.content
+    )
+
+
 @app.route("/")
 def index():
     return "Hello, World!"
