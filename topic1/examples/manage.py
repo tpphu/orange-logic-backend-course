@@ -10,7 +10,7 @@ db = SQLAlchemy(app)
 class Blog(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String(256), unique=False, nullable=False)
-    content = db.Column(db.String(4096),    unique=False, nullable=False)
+    content = db.Column(db.String(4096), unique=False, nullable=False)
 
 @app.route("/blog", methods=["POST"])
 def blog_create():
