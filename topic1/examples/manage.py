@@ -1,4 +1,4 @@
-from flask import Flask, jsonify, request
+from flask import Flask, jsonify, request, abort
 from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__)
@@ -30,6 +30,19 @@ def blog_get(id):
     blog = Blog.query.filter_by(id=id).first()
     return jsonify(
         id = blog.id,
+        title=blog.title,
+        content=blog.content
+    )
+
+@app.route("/blog/<int:id>", methods=["DELETE"])
+def blog_delete(id):
+    blog = Blog.query.filter_by(id=id).first()
+    if blog is None:
+        abort(404, "Not found") 
+    db.session.delete(blog)
+    db.session.commit()
+    return jsonify(
+        id=blog.id,
         title=blog.title,
         content=blog.content
     )

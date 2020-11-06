@@ -33,5 +33,14 @@ Welcome to my course, I am on way to help you.
 - Logging
 - Monitoring
 
+## Run
 
+```sh
+python3 -m venv venv
+. venv/bin/activate
+pip install Flask
+pip install Flask-SQLAlchemy
+pip install mysqlclient
+pip install pymysql
+```
  
